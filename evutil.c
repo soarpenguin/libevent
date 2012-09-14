@@ -566,11 +566,11 @@ evutil_socket_finished_connecting_(evutil_socket_t fd)
    set by evutil_check_interfaces. */
 static int have_checked_interfaces, had_ipv4_address, had_ipv6_address;
 
-/* Macro: True iff the IPv4 address 'addr', in host order, is in 127.0.0.0/8
+/* Macro: True if the IPv4 address 'addr', in host order, is in 127.0.0.0/8
  */
 #define EVUTIL_V4ADDR_IS_LOCALHOST(addr) (((addr)>>24) == 127)
 
-/* Macro: True iff the IPv4 address 'addr', in host order, is a class D
+/* Macro: True if the IPv4 address 'addr', in host order, is a class D
  * (multiclass) address.
  */
 #define EVUTIL_V4ADDR_IS_CLASSD(addr) ((((addr)>>24) & 0xf0) == 0xe0)
